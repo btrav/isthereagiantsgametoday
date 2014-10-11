@@ -1,8 +1,8 @@
-# Is there a Giants game today?
+# Is there a Nats game today?
 
 ## Getting the code
 
-To get a local copy of the current code, clone it using git:
+To get a local copy of the current MASTER code, clone it using git (note, this is a forked version):
 
     $ git clone git://github.com/lforrest/isthereagiantsgametoday.git isthereagiantsgametoday
 
