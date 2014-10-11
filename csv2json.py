@@ -29,17 +29,17 @@ next(raw_schedule)
 for row in raw_schedule:
     # CSV uses 2-digit years; we want 4 digits in the JSON.
     date = ''.join([row[0][:6], '20', row[0][-2:]])
-    
+
     # Remove the space and make "pm" lowercase
     time = ''.join(c.lower() for c in row[1] if not c.isspace())
-    
+
     # Remove leading zeroes from times, such as 02:00pm
     if int(time[0]) == 0:
         time = time[1:]
 
     # Trim the subject description down to the opponent name
     opponent = row[3]
-    opponent = opponent.replace('at', '').replace('Giants', '').strip()
+    opponent = opponent.replace(' at ', '').replace('Nationals', '').strip()
 
     json_data = { "date": date,
                   "opponent": opponent,
@@ -47,8 +47,8 @@ for row in raw_schedule:
                   "location": row[4] }
     schedule.append(json_data)
 
-full_contents = { "title": "Giants Game Schedule",
-                  "link": "http://www.isthereagiantsgametoday.com/",
+full_contents = { "title": "Nats Game Schedule",
+                  "link": "http://www.isthereanatsgametoday.com/",
                   "games": schedule }
 
 # Pretty printing, just like in the json library docs example
