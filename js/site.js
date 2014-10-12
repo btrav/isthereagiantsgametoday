@@ -9,7 +9,7 @@ function ISODateString(d){
 }
 
 $(document).ready(function(){
-    var url = 'data/nats2014schedule.json';
+    var url = 'data/nats2015schedule.json';
 
     var today = new Date();
     var nextGame = null;
@@ -35,7 +35,7 @@ $(document).ready(function(){
             nextGameDate = new Date(game.date);
 
             // Uncomment for debugging
-            console.log("Today: " + today + " - Looking at game: " + nextGameDate);
+            //console.log("Today: " + today + " - Looking at game: " + nextGameDate);
 
           if (!nextGame && isDateLaterThan(nextGameDate, today)){
             nextGame = game;
@@ -55,9 +55,9 @@ $(document).ready(function(){
             $("#game .tstart").text(todaysGame.time);
 
             $("#game abbr").attr('title', ISODateString(nextGameDate));
-            if (todaysGame.location == "AT&T Park") {
+            if (todaysGame.location == "Nationals Park") {
                 $("body").addClass("home");
-                $("#yesno .homeaway").text("At home");
+                $("#yesno .homeaway").text("at home");
              }
              else {
                 $("body").addClass("away");
@@ -74,10 +74,12 @@ $(document).ready(function(){
 
           // Format next game date as day of the week
           var weekday = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"];
+          var month = ["January","February","March","April","May","June","July","August","September","October","November","December"];
           var nextGameDay = weekday[nextGameDate.getDay()];
-          $("#game .day").text("on " + nextGameDay);
+          var nextGameMonth = month[nextGameDate.getMonth()];
+          $("#game .day").text("on " + nextGameDay + ", " + nextGameMonth + " " + nextGameDate.getDate() + " at ");
           $("#game .tstart").text(nextGame.time);
-          // if (nextGame.location == "AT&T Park") {
+          // if (nextGame.location == "Home Stadium") {
           //  $("#nextgame .location").addClass("homegame");
           //   $("body").addClass("homegame-bg");
           // }
