@@ -69,7 +69,7 @@ $(document).ready(function(){
         else {
           $(".fill-in").text("NO");
           $("#game .date").text(nextGame.date);
-          $("#game .summary").text("Nats will play the " + nextGame.opponent);
+          $("#game .summary").text("Nationals will play the " + nextGame.opponent);
           $("#game .location").text(nextGame.location);
 
           // Format next game date as day of the week

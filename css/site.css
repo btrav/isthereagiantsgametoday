@@ -9,7 +9,7 @@ a:hover { border-bottom: 2px solid #000; }
 a#counter:hover { border: 0; text-decoration: underline; }
 
 #game { display: none; }
-.fill-in { font-family: 'Permanent Marker', arial, sans-serif; font-size: 150px; }
+.fill-in { font-family: 'Graduate', arial, sans-serif; font-size: 150px; }
 .homeaway { font-weight: bold; font-size: 50px; }
 .home { background: #000; color: #D2612F; }
 .away { background: #FFF; color: #000; }
@@ -46,7 +46,7 @@ a#counter:hover { border: 0; text-decoration: underline; }
     .homeaway { font-size: 34px; }
 }
 
-@media screen and (max-width: 320px) {  
+@media screen and (max-width: 320px) {
     body { width: 80%; }
     #isthere { font-size: 40px; }
     #game { font-size: 24px; }
@@ -56,6 +56,6 @@ a#counter:hover { border: 0; text-decoration: underline; }
 }
 
 @media screen and (max-width: 240px) {
-	
-	
+
+
 }
