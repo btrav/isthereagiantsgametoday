@@ -50,7 +50,7 @@ $(document).ready(function(){
 
         if (todaysGame) {
             $(".fill-in").text("YES");
-            $("#game .summary").text("Giants play the " + todaysGame.opponent);
+            $("#game .summary").text("Nats play the " + todaysGame.opponent);
             $("#game .location").text(todaysGame.location);
             $("#game .tstart").text(todaysGame.time);
 

@@ -11,8 +11,8 @@ a#counter:hover { border: 0; text-decoration: underline; }
 #game { display: none; }
 .fill-in { font-family: 'Graduate', arial, sans-serif; font-size: 150px; }
 .homeaway { font-weight: bold; font-size: 50px; }
-.home { background: #000; color: #D2612F; }
-.away { background: #FFF; color: #000; }
+.home { background: #C11; color: #FFF; }
+.away { background: #FFF; color: #C11; }
 
 
 /* =Responsive Design
