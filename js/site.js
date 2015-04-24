@@ -55,7 +55,7 @@ $(document).ready(function(){
             $("#game .tstart").text(todaysGame.time);
 
             $("#game abbr").attr('title', ISODateString(nextGameDate));
-            if (todaysGame.location.indexOf("Nationals Park" !== -1)) {
+            if (todaysGame.location.indexOf("Nationals Park") !== -1) {
                 $("body").addClass("home");
                 $("#yesno .homeaway").text("at Home");
              }
